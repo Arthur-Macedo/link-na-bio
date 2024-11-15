@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { IoMdArrowRoundBack } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 import Detalhes from "../../components/Cortes/detalhes";
 import Degrade from "../../Assets/degrade.jpg";
 import Pigmentacao from "../../Assets/pigmentacao.jpg";
@@ -46,13 +48,16 @@ const cuts = [
 
 function CatalogPage() {
   const [selectedCut, setSelectedCut] = useState(null);
+  const [scrollPosition, setScrollPosition] = useState(0); 
 
   const handleCutClick = (cut) => {
+    setScrollPosition(window.scrollY);
     setSelectedCut(cut);
   };
 
   const handleCloseDetail = () => {
     setSelectedCut(null);
+    window.scrollTo(0, scrollPosition);
   };
 
   return (
@@ -61,30 +66,34 @@ function CatalogPage() {
         <Detalhes cut={selectedCut} onClose={handleCloseDetail} />
       ) : (
         <>
-          <h1 className="text-white text-2xl font-bold mb-5">
-            Catálogo de Cortes
-          </h1>
+          <div className="flex items-center space-x-6 p-4">
+            <Link to="/" className="text-orange-300 hover:text-orange-400">
+              <IoMdArrowRoundBack size={26} />
+            </Link>
+
+            <div className="text-white">
+              <h1 className="text-2xl font-semibold">Catálogo de Cortes</h1>
+            </div>
+          </div>
+
+          {/* Grid de cortes */}
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {cuts.map((cut) => (
               <div
                 key={cut.id}
                 onClick={() => handleCutClick(cut)}
-                className="flex flex-col p-3 bg-gray-800 rounded-2xl shadow-md hover:bg-gray-700 transition transform hover:scale-105 cursor-pointer"
+                className="flex flex-col p-2 border-2 rounded-2xl shadow-md hover:bg-gray-700 transition transform hover:scale-105 cursor-pointer"
               >
-                {/* Ajuste da imagem proporcional */}
                 <div className="flex justify-center">
                   <img
                     src={cut.img}
                     alt={cut.name}
-                    className="w-64 h-48 object-cover rounded-lg mt-1 mb-4" // Diminuindo o tamanho da imagem proporcionalmente
+                    className="w-64 h-48 object-cover rounded-lg mt-1 mb-4"
                   />
                 </div>
 
-                {/* Texto alinhado à esquerda */}
-                <div className="text-left">
-                  <h2 className="text-white text-xl font-semibold">
-                    {cut.name}
-                  </h2>
+                <div className="ml-10">
+                  <h2 className="text-white text-xl font-semibold">{cut.name}</h2>
                   <p className="text-gray-400 text-lg">{cut.price}</p>
                 </div>
               </div>

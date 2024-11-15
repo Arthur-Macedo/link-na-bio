@@ -9,27 +9,22 @@ function App() {
   return (
     <div className="bg-black text-white min-h-screen flex flex-col">
       <header className="flex flex-col items-center py-8">
-        <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-orange-300 mb-6">
+        <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-orange-300 mb-6">
           <img src={Logo} alt="Logo" className="w-full h-full object-cover" />
         </div>
 
         <div className="text-center">
-          <h1 className="text-2xl md:text-3xl font-bold tracking-widest text-orange-300 rubik-dirt-bold">
-            BARBEARIA DO
-            <br /> GUETO
+          <h1 className="text-2xl md:text-3xl font-bold tracking-widest text-orange-300 bebas-neue-regular">
+            @barbearia_do_gueto
           </h1>
         </div>
 
-        <div className="w-80 h-0.5 bg-gray-200 mt-4"></div>
+        <div className="w-64 h-0.5 bg-gray-400 mt-4"></div>
 
         <div>
-          <p className="text-center mt-5 text-xl md:text-2xl text-gray-200">
-            Links <br /> <span className="text-xl">Importantes</span>
+          <p className="text-center mt-4 -mb-3 text-lg md:text-xl text-gray-200">
+          O Estilo Que Você Merece
           </p>
-        </div>
-
-        <div className="mt-4 -mb-8 animate-bounce">
-          <span className="text-[#5AD5E7] text-3xl">↓</span>
         </div>
       </header>
 
@@ -39,7 +34,7 @@ function App() {
             href="https://wa.me/5585992224729?text=Venho%20através%20do%20Instagram%20e%20quero%20marcar%20um%20horário"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center p-4 lg:p-5 bg-gray-800 rounded-2xl shadow-md hover:bg-gray-700 transition-transform transform hover:scale-105"
+            className="flex items-center p-3 lg:p-5 border-2 rounded-2xl shadow-md hover:bg-gray-700 transition-transform transform hover:scale-105"
           >
             <img
               src={Whatsapp}
@@ -58,7 +53,7 @@ function App() {
             href="https://maps.app.goo.gl/56HyJmJEu9sVAxKK6"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center p-4 lg:p-5 bg-gray-800 rounded-2xl shadow-md hover:bg-gray-700 transition-transform transform hover:scale-105"
+            className="flex items-center p-4 lg:p-5 border-2 rounded-2xl shadow-md hover:bg-gray-700 transition-transform transform hover:scale-105"
           >
             <img
               src={Loc}
@@ -75,7 +70,7 @@ function App() {
 
           <Link
             to="/catalogo"
-            className="flex items-center p-4 lg:p-5 mb-2 bg-gray-800 rounded-2xl shadow-md hover:bg-gray-700 transition-transform transform hover:scale-105"
+            className="flex items-center p-3 lg:p-5 border-2 mb-2 rounded-2xl shadow-md hover:bg-gray-700 transition-transform transform hover:scale-105"
           >
             <img
               src={Catalogo}
@@ -90,16 +85,15 @@ function App() {
             </div>
           </Link>
         </div>
-      </div>
 
-      <footer className="bg-gray-900 py-6">
-        <div className="text-center text-gray-500 text-sm">
+        <div className="text-center text-gray-500 text-sm mt-4">
           <p>
             &copy; {new Date().getFullYear()} Arthur Macêdo. Todos os direitos
             reservados.
           </p>
         </div>
-      </footer>
+
+      </div>
     </div>
   );
 }
