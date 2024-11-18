@@ -19,7 +19,7 @@ const cuts = [
   {
     id: 2,
     name: "Nevou",
-    price: "R$ 70,00",
+    price: "R$ 90,00",
     img: Nevou,
     description: "Estilo nevado que combina cor e corte precisos.",
   },
@@ -32,8 +32,8 @@ const cuts = [
   },
   {
     id: 4,
-    name: "FreeStyle",
-    price: "R$ 30,00",
+    name: "Corte mais freeStyle",
+    price: "R$ 25,00",
     img: Style,
     description: "Um corte que inclui técnicas avançadas de FreeStyle.",
   },
@@ -43,6 +43,13 @@ const cuts = [
     price: "R$ 75,00",
     img: Reflexo,
     description: "Reflexos alinhados para um visual elegante e sofisticado.",
+  },
+  {
+    id: 1,
+    name: "Social",
+    price: "R$ 20,00",
+    img: Degrade,
+    description: "Um corte moderno que destaca autenticidade.",
   },
 ];
 

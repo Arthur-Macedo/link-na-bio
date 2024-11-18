@@ -24,7 +24,7 @@ const Detalhes = ({ cut, onClose }) => {
           alt={cut.name}
           className="w-full h-64 object-cover rounded-md"
         />
-        <h1 className="text-white text-3xl font-bold mt-4">{cut.name}</h1>
+        <h1 className="text-white text-2xl font-bold mt-4">{cut.name}</h1>
         <p className="text-gray-400 text-xl mt-2">{cut.price}</p>
         <p className="text-gray-300 mt-4">{cut.description}</p>
         <button
