@@ -82,7 +82,7 @@ function CatalogPage() {
               <div
                 key={cut.id}
                 onClick={() => handleCutClick(cut)}
-                className="flex flex-col p-2 border-2 rounded-2xl shadow-md hover:bg-gray-700 transition transform hover:scale-105 cursor-pointer"
+                className="flex flex-col px-1 py-2 border-2 rounded-2xl shadow-md hover:bg-gray-700 transition transform hover:scale-105 cursor-pointer"
               >
                 <div className="flex justify-center">
                   <img
@@ -95,6 +95,7 @@ function CatalogPage() {
                 <div className="ml-10">
                   <h2 className="text-white text-xl font-semibold">{cut.name}</h2>
                   <p className="text-gray-400 text-lg">{cut.price}</p>
+                  <p className="text-gray-300 mt-4">{cut.description}</p>
                 </div>
               </div>
             ))}
